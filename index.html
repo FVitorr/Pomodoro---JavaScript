@@ -1,0 +1,125 @@
+<html lang="Pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d881c2b784.js" crossorigin="anonymous"></script>
+    <title>Pomodoro</title>
+</head>
+<body>
+    <div id="body_left">
+        <div class="body_tasks">
+            <div class="title_tasks">
+                <h2>Tarefas</h2>
+            </div>
+            <div class="line"></div>
+            <div class="content_tasks">
+                <table border="1px solid black ">
+                    <tr id="table_content">
+                        <td><input type="checkbox" name="selected" id=""></td>
+                        <td>Escovar Dentes</td>
+                        <td>10:00</td>
+                        <td class="removed_icon"><i class="fa-solid fa-trash-can"></i></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="footer_tasks">
+                <div class="c_footer add_tasks">
+                    <input type="text" placeholder="New Task">
+                    <input type="text" placeholder="10:00">
+                    <i class="fa-solid fa-circle-plus i_add"></i>
+                </div>
+                <div class="c_footer">
+                    <input id = "task_complet" type="button" value="Concluida">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="body_ rules">
+                <h2>Lembretes</h2>
+                <div class="line"></div>
+                <div class="container_table">
+                    <table id = "table_reminder" border="1px solid black"></table>
+                </div>
+                <div class="footer_tasks">
+                    <div class="c_footer add_tasks">
+                        <input  id="new_reminder" type="text" placeholder="New reminder">
+                        <input id="new_date" type="text" placeholder="00/00/00">
+                        <i class="fa-solid fa-circle-plus i_add" onclick="submit_reminder();"></i>
+                    </div>
+                </div>
+            </div>
+            <div class = "body_">
+                <h2>Regras</h2>
+                <div class="line"></div>
+                <div id="body_rules">
+                    <ul>
+                        <li>
+                            <p>Peito Estufado e Ombros para tras</p>
+                        </li>
+                        <li>
+                            <p>Regra do 3s</p>
+                        </li>
+                        <li>
+                            <p>Troque: "Obrigado"<br>Por: "Fico feliz em ajudar"</p>
+                        </li>
+                        <li>
+                            <p>Começe algo</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer_rules">
+                    <div class="c_rules">
+                        <input type="text" placeholder="New rules">
+                        <i class="fa-solid fa-circle-plus i_add" ></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="body_right">
+        <div class="body_msg">
+            <p>O primeiro método para estimar a inteligência de um governante é olhar para os homens que tem à sua volta.</p>
+        </div>
+        <div class="content">
+            <div id="body_content">
+                <h1>Rotina</h1>
+                <div class="line"></div>
+                <div class="routine_body">
+
+                </div>
+                <div class="routine_footer">
+                    <div class="button_routine">
+                        <i class="fa-solid fa-angles-left"></i>
+                    </div>
+                    <div class="button_routine">
+                        <i class="fa-solid fa-trash"></i>
+                    </div>
+                    <div class="button_routine">
+                        <i class="fa-solid fa-angles-right"></i>
+                    </div>
+                </div>
+            </div>
+            <div id="body_content_pomodoro">
+                <div id ="pomodoro">
+                    <h1>00:00</h1>
+                </div>
+                <div id ="pomodoro_fuction">
+                    <div class="pomodoro_buton first">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+                    <div class="pomodoro_buton last">
+                        <i class="fa-solid fa-pause"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="localStore.js"></script>
+    <script src="reminder.js"></script>
+</body>
+</html>
